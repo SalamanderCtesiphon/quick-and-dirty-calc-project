@@ -2,6 +2,11 @@ let a = 0;
 let b = 0;
 let operation = "none";
 let displayArr = [];
+let operationsObject = {
+  a: 0,
+  b: 0,
+  operation: "",
+};
 const add = function(a, b) {
   return a + b;
 };
@@ -50,19 +55,62 @@ btnClear.addEventListener("click", () => {
   displayNumbers(displayArr);
 });
 btnEqual.addEventListener("click", () => {
-  console.log("you pressed Equal");
 });
 btnPlus.addEventListener("click", () => {
-  console.log("you pressed plus");
+  a = displayArr.join("");
+  if(a === "") {
+    return;
+  };
+  displayArr = [];
+  displayNumbers(displayArr);
+  console.log(a);
+  operationsObject.a = a;
+  a = 0;
+  operationsObject.operation = "add";
+
+  console.log(operationsObject);
 });
 btnSub.addEventListener("click", () => {
-  console.log("you pressed sub");
+  a = displayArr.join("");
+  if(a === "") {
+    return;
+  };
+  displayArr = [];
+  displayNumbers(displayArr);
+  console.log(a);
+  operationsObject.a = a;
+  a = 0;
+  operationsObject.operation = "subtract";
+
+  console.log(operationsObject);
 });
 btnMult.addEventListener("click", () => {
-console.log("you pressed mult");
+  a = displayArr.join("");
+  if(a === "") {
+    return;
+  };
+  displayArr = [];
+  displayNumbers(displayArr);
+  console.log(a);
+  operationsObject.a = a;
+  a = 0;
+  operationsObject.operation = "multiply";
+
+  console.log(operationsObject);
 });
 btnDiv.addEventListener("click", () => {
-  console.log("you pressed div");
+  a = displayArr.join("");
+  if(a === "") {
+    return;
+  };
+  displayArr = [];
+  displayNumbers(displayArr);
+  console.log(a);
+  operationsObject.a = a;
+  a = 0;
+  operationsObject.operation = "divide";
+
+  console.log(operationsObject);
 });
 btn0.addEventListener("click", () => {
   displayArr.push(0);
