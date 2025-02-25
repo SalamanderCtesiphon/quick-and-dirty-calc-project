@@ -53,14 +53,41 @@ const btnClear = document.querySelector("#btnClear");
 btnClear.addEventListener("click", () => {
   displayArr = [];
   displayNumbers(displayArr);
+  operationsObject.a = 0;
+  operationsObject.b = 0;
+  operationsObject.operation = "";
+  console.log(operationsObject);
 });
 btnEqual.addEventListener("click", () => {
-});
-btnPlus.addEventListener("click", () => {
-  a = displayArr.join("");
-  if(a === "") {
+  b1 = displayArr.join("");
+  if(b1 === "") {
     return;
   };
+  b = Number(b1);
+  displayArr = [];
+  displayNumbers(displayArr);
+  operationsObject.b = b;
+  b = 0;
+  a = operationsObject.a;
+  b = operationsObject.b;
+  operation = operationsObject.operation;
+  console.log(operate(a, b, operation));
+  let results = operate(a, b, operation);
+  display.textContent = results;
+  operationsObject.a = results;
+  a = results;
+  displayArr.push(results);
+  operationsObject.b = 0;
+  operationsObject.operation = "";
+  console.log(operationsObject); 
+});
+btnPlus.addEventListener("click", () => {
+  a1 = displayArr.join("");
+  if(a1 === "") {
+    return;
+  };
+
+  a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
   console.log(a);
@@ -71,10 +98,12 @@ btnPlus.addEventListener("click", () => {
   console.log(operationsObject);
 });
 btnSub.addEventListener("click", () => {
-  a = displayArr.join("");
-  if(a === "") {
+  a1 = displayArr.join("");
+  if(a1 === "") {
     return;
   };
+
+  a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
   console.log(a);
@@ -85,10 +114,12 @@ btnSub.addEventListener("click", () => {
   console.log(operationsObject);
 });
 btnMult.addEventListener("click", () => {
-  a = displayArr.join("");
-  if(a === "") {
+  a1 = displayArr.join("");
+  if(a1 === "") {
     return;
   };
+
+  a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
   console.log(a);
@@ -99,10 +130,12 @@ btnMult.addEventListener("click", () => {
   console.log(operationsObject);
 });
 btnDiv.addEventListener("click", () => {
-  a = displayArr.join("");
-  if(a === "") {
+  a1 = displayArr.join("");
+  if(a1 === "") {
     return;
   };
+
+  a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
   console.log(a);
