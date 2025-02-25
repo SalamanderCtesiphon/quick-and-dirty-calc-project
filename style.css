@@ -10,15 +10,16 @@ button {
   width: 40px;
 }
 
-#btn0 {
+#btn0, #clear {
   width: 92px;
 
 }
 
 .display {
-  height: 60px;
+  height: 50px;
   width: 200px;
   border-radius: 4px;
   background-color: light-gray;
   border: 1px solid black;
+  font-size: 35px;
 }
