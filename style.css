@@ -1,0 +1,24 @@
+* {
+  * box-sizing: border-box;
+  *
+}
+
+button {
+  font-size: 30px;
+  padding: 6px;
+  margin: 4px;
+  width: 40px;
+}
+
+#btn0 {
+  width: 92px;
+
+}
+
+.display {
+  height: 60px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: light-gray;
+  border: 1px solid black;
+}
