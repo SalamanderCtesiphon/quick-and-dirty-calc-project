@@ -56,7 +56,6 @@ btnClear.addEventListener("click", () => {
   operationsObject.a = 0;
   operationsObject.b = 0;
   operationsObject.operation = "";
-  console.log(operationsObject);
 });
 btnEqual.addEventListener("click", () => {
   b1 = displayArr.join("");
@@ -71,7 +70,6 @@ btnEqual.addEventListener("click", () => {
   a = operationsObject.a;
   b = operationsObject.b;
   operation = operationsObject.operation;
-  console.log(operate(a, b, operation));
   let results = operate(a, b, operation);
   display.textContent = results;
   operationsObject.a = results;
@@ -79,71 +77,53 @@ btnEqual.addEventListener("click", () => {
   displayArr.push(results);
   operationsObject.b = 0;
   operationsObject.operation = "";
-  console.log(operationsObject); 
 });
 btnPlus.addEventListener("click", () => {
   a1 = displayArr.join("");
   if(a1 === "") {
     return;
   };
-
   a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
-  console.log(a);
   operationsObject.a = a;
   a = 0;
   operationsObject.operation = "add";
-
-  console.log(operationsObject);
 });
 btnSub.addEventListener("click", () => {
   a1 = displayArr.join("");
   if(a1 === "") {
     return;
   };
-
   a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
-  console.log(a);
   operationsObject.a = a;
   a = 0;
   operationsObject.operation = "subtract";
-
-  console.log(operationsObject);
 });
 btnMult.addEventListener("click", () => {
   a1 = displayArr.join("");
   if(a1 === "") {
     return;
   };
-
-  a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
-  console.log(a);
   operationsObject.a = a;
   a = 0;
   operationsObject.operation = "multiply";
-
-  console.log(operationsObject);
 });
 btnDiv.addEventListener("click", () => {
   a1 = displayArr.join("");
   if(a1 === "") {
     return;
   };
-
   a = Number(a1);
   displayArr = [];
   displayNumbers(displayArr);
-  console.log(a);
   operationsObject.a = a;
   a = 0;
   operationsObject.operation = "divide";
-
-  console.log(operationsObject);
 });
 btn0.addEventListener("click", () => {
   displayArr.push(0);
